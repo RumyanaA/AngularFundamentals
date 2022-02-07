@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DeleteComponent } from './components/delete/delete.component';
-import { CreateComponent } from './components/create/create.component';
-import { ReadComponent } from './components/read/read.component';
-import { UpdateComponent } from './components/update/update.component';
+import { MatTableModule } from '@angular/material/table';
 import { PostsComponent } from './components/posts/posts.component';
-import { PostsService } from './posts.service';
-
+import { PostsService } from './services/posts.service';
+import { PostDetailsComponent } from './components/posts/post-details/post-details.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { TransferDataService } from './services/transferData.service';
 
 @NgModule({
   declarations: [
-    DeleteComponent,
-    CreateComponent,
-    ReadComponent,
-    UpdateComponent,
-    PostsComponent
+    PostsComponent,
+    PostDetailsComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule,
+    AppRoutingModule,
   ],
-  exports:[],
-  providers:[
-    PostsService
-  ]
+  exports: [],
+  providers: [
+    PostsService,
+    TransferDataService,
+  ],
 })
-export class PostsModule { }
+export default class PostsModule { }
