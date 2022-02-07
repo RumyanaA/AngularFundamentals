@@ -11,4 +11,8 @@ export class BaseService {
   get():Observable<Posts[]> {
     return this.httpClient.get<Posts[]>(this.url);
   }
+
+  getPost(id:number) {
+    return this.httpClient.get<Posts>(`${this.url}/${id}`);
+  }
 }

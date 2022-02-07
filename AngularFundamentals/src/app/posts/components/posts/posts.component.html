@@ -1,5 +1,4 @@
-<p>posts works!</p>
-
+<button routerLink="add">Add Post</button>
 <table mat-table [dataSource]="posts">
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
@@ -19,8 +18,8 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions</th>
         <td mat-cell *matCellDef="let row"> 
-            <button routerLink=`${{row.id}}` (click)="getData(row)">Details</button>
-            <button>Edit</button>
+            <button routerLink="{{row.id}}" (click)="getData(row)">Details</button>
+            <button routerLink="{{row.id}}/edit" (click)="getData(row)">Edit</button>
             <button>Delete</button> 
         </td>
       </ng-container>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostDetailsComponent } from './post-details.component';
+import { ViewEditComponent } from './view-edit.component';
 
-describe('PostDetailsComponent', () => {
-  let component: PostDetailsComponent;
-  let fixture: ComponentFixture<PostDetailsComponent>;
+describe('ViewEditComponent', () => {
+  let component: ViewEditComponent;
+  let fixture: ComponentFixture<ViewEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostDetailsComponent ]
+      declarations: [ ViewEditComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostDetailsComponent);
+    fixture = TestBed.createComponent(ViewEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
