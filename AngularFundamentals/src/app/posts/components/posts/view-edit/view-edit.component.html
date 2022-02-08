@@ -1,8 +1,12 @@
-<div>
-    <input value={{post.id}}>
-    
-    <p>{{post.title}}</p>
-    <p>{{post.completed}}</p>
-    <button>Update</button>
-    <button>Cancel</button>
-</div>
+<form [formGroup]="postForm" (ngSubmit)="updatePost()">
+    <label for="userId">User id </label>
+    <input readonly="true" id="userId" type="text" formControlName="userId">
+    <label for="id">Id </label>
+    <input readonly="true" id="id" type="text" formControlName="id">
+    <label for="title">Title: </label>
+    <input id="title" type="text" formControlName="title">
+    <mat-checkbox aria-label="completed" formControlName="completed">Completed</mat-checkbox>
+    <button type="submit">Update</button>
+    <button (click)="goBack()" type="button">Cancel</button>
+</form>
+

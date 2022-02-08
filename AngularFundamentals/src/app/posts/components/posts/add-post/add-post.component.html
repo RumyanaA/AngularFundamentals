@@ -1,4 +1,9 @@
-<p>add-post works!</p>
-<label for="title">Title: </label>
-<input id="title" type="text" [formControl]="title">
-<button>Submit</button>
+
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title: </label>
+    <input id="title" type="text" formControlName="title">
+    <mat-checkbox aria-label="completed" formControlName="completed">Completed</mat-checkbox>
+    <button type="submit">Submit</button>
+</form>
+
+
