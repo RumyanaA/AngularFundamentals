@@ -1,5 +1,16 @@
 .postForm{
     display:flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    padding:5px;
+    height: 360px;
+    justify-content: space-between;
+}
+
+.postFormContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
 }

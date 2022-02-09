@@ -1,5 +1,5 @@
-<div>
-<button routerLink="add">Add Post</button>
+<div class="table-container">
+<button type="button" routerLink="add" mat-raised-button color="primary">Add Post</button>
 <table mat-table [dataSource]="dataSource">
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
@@ -13,15 +13,15 @@
         <td mat-cell *matCellDef="let row"> {{row.title}} </td>
       </ng-container>
       <ng-container matColumnDef="completed">
-        <th mat-header-cell *matHeaderCellDef> Completed </th>
+        <th class="mat-header-cell-completed" mat-header-cell *matHeaderCellDef> Completed </th>
         <td mat-cell *matCellDef="let row"> {{row.completed}} </td>
       </ng-container>
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions</th>
         <td mat-cell *matCellDef="let row"> 
-            <button routerLink="{{row.id}}" >Details</button>
-            <button routerLink="{{row.id}}/edit" >Edit</button>
-            <button (click)="confirmDelete(row.id)">Delete</button> 
+          <a mat-raised-button routerLink="{{row.id}}" >Details</a>
+          <a class="editButton" mat-raised-button routerLink="{{row.id}}/edit">Edit</a>
+          <button class="deleteButton" mat-raised-button type="button" (click)="confirmDelete(row.id)">Delete</button>
         </td>
       </ng-container>     
 </table>
