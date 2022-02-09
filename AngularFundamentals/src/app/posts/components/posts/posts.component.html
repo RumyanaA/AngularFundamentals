@@ -1,3 +1,4 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
 <div class="table-container">
 <button type="button" routerLink="add" mat-raised-button color="primary">Add Post</button>
 <table mat-table [dataSource]="dataSource">
@@ -6,7 +7,7 @@
 
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td routerLink="{{row.id}}" mat-cell *matCellDef="let row"> {{row.id}} </td>
+        <td class="mat-cell-id" routerLink="{{row.id}}" mat-cell *matCellDef="let row"> {{row.id}} </td>
       </ng-container>
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef> Title </th>

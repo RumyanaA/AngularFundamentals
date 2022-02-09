@@ -19,6 +19,8 @@ import { PostsService } from '../../services/posts.service';
 export class PostsComponent implements OnInit, OnDestroy, AfterViewInit {
   public columnsToDisplay = ['id', 'title', 'completed', 'actions'];
 
+  public showSpinner = true;
+
   dataSource = new MatTableDataSource<Posts>([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -37,6 +39,7 @@ export class PostsComponent implements OnInit, OnDestroy, AfterViewInit {
       .pipe(takeUntil(this.destroy$))
       .subscribe((res: Posts[]) => {
         this.dataSource.data = res;
+        this.showSpinner = false;
       });
   }
 

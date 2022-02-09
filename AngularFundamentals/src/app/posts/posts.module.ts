@@ -10,10 +10,10 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostsService } from './services/posts.service';
 import { ViewDetailsComponent } from './components/posts/view-details/view-details.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { TransferDataService } from './services/transferData.service';
 import { ViewEditComponent } from './components/posts/view-edit/view-edit.component';
 import { PostsRoutingModule } from './posts-routing.module';
 import { AddPostComponent } from './components/posts/add-post/add-post.component';
+import { LoadingSpinnerComponent } from '../ui/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { AddPostComponent } from './components/posts/add-post/add-post.component
     ViewDetailsComponent,
     ViewEditComponent,
     AddPostComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +37,6 @@ import { AddPostComponent } from './components/posts/add-post/add-post.component
   exports: [],
   providers: [
     PostsService,
-    TransferDataService,
   ],
 })
 export default class PostsModule { }
