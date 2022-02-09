@@ -12,7 +12,7 @@ import { PostsService } from 'src/app/posts/services/posts.service';
 @Component({
   selector: 'app-view-details',
   templateUrl: './view-details.component.html',
-  styleUrls: ['./view-details.component.sass'],
+  styleUrls: ['./view-details.component.scss'],
 })
 export class ViewDetailsComponent implements OnInit {
   public post: Posts;

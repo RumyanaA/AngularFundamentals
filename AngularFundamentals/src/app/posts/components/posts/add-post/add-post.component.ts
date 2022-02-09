@@ -10,7 +10,7 @@ import { PostsService } from 'src/app/posts/services/posts.service';
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
-  styleUrls: ['./add-post.component.sass'],
+  styleUrls: ['./add-post.component.scss'],
 })
 export class AddPostComponent implements OnInit, OnDestroy {
   public postForm = new FormGroup({

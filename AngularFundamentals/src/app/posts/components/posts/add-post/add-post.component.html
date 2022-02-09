@@ -1,9 +1,12 @@
-
-<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-    <label for="title">Title: </label>
-    <input id="title" type="text" formControlName="title">
+<div class="formContainer">
+<form class="postForm" [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label for="title">Title</mat-label>
+        <input id="title" type="text" matInput formControlName="title">
+      </mat-form-field>
     <mat-checkbox aria-label="completed" formControlName="completed">Completed</mat-checkbox>
-    <button type="submit">Submit</button>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
 </form>
+</div>
 
 

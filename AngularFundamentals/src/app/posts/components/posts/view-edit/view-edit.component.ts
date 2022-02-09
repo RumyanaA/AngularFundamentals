@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-view-edit',
   templateUrl: './view-edit.component.html',
-  styleUrls: ['./view-edit.component.sass'],
+  styleUrls: ['./view-edit.component.scss'],
 })
 export class ViewEditComponent implements OnInit, OnDestroy {
   public postForm = new FormGroup({

@@ -1,0 +1,18 @@
+.postForm{
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    height: 160px;
+    justify-content: space-between;
+    border: 2px solid rgb(226, 95, 160);
+    border-radius: 5px;
+    padding:5px;
+}
+.formContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.mat-raised-button{
+    width:120px;
+}

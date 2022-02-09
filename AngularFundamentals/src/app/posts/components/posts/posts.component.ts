@@ -14,7 +14,7 @@ import { PostsService } from '../../services/posts.service';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.sass'],
+  styleUrls: ['./posts.component.scss'],
 })
 export class PostsComponent implements OnInit, OnDestroy, AfterViewInit {
   public columnsToDisplay = ['id', 'title', 'completed', 'actions'];
