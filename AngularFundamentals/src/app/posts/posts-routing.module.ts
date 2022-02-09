@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { AddPostComponent } from './components/posts/add-post/add-post.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { ViewDetailsComponent } from './components/posts/view-details/view-details.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'posts/:id/edit', component: ViewEditComponent },
   { path: 'posts/:id', component: ViewDetailsComponent },
   { path: 'posts', component: PostsComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
